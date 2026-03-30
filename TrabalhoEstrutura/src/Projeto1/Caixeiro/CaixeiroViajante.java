@@ -61,8 +61,8 @@ public class CaixeiroViajante {
 
 
     public static void main(String[] args) {
-        int[] tamanhos = {500, 1000, 2000};
-        int numExecucoes = 5;
+        int[] tamanhos = {5, 10, 20};
+        int numExecucoes = 30;
 
         System.out.println("Iniciando Experimentos do Caixeiro-Viajante...\n");
 
@@ -85,7 +85,7 @@ public class CaixeiroViajante {
                 tempos[i] = (fim - inicio);
 
 
-                System.out.println("Tempos das 5 execucoes (em nanosegundos):");
+                System.out.println("Tempos das 30 execucoes (em nanosegundos):");
                 for (long t : tempos) {
                     System.out.println(t);
                 }
