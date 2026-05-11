@@ -6,9 +6,9 @@ public class AlgoritmosOrdenacao {
     public static void mergeSort(int[] array, int inicio, int fim) {
         if (inicio < fim) {
             int meio = (inicio + fim) / 2;
-            mergeSort(array, inicio, meio); // Ordena a metade esquerda
-            mergeSort(array, meio + 1, fim); // Ordena a metade direita
-            merge(array, inicio, meio, fim); // Junta as duas metades
+            mergeSort(array, inicio, meio);
+            mergeSort(array, meio + 1, fim);
+            merge(array, inicio, meio, fim);
         }
     }
 

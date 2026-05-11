@@ -1,6 +1,6 @@
 package Projeto2;
 
-import Projeto1.Avl; // Importando a árvore do Projeto 1
+import Projeto1.Avl;
 
 public class MainBenchmarkBusca {
 
