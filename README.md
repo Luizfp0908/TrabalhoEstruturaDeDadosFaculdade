@@ -1,38 +1,42 @@
 # Estruturas, Pesquisa e Ordenação de Dados 🌳🔍📊
 
-Repositório destinado aos projetos práticos da avaliação bimestral da disciplina de **Estruturas, Pesquisa e Ordenação de Dados** do curso de Engenharia de Software (5º Semestre) da Unicesumar.
+Repositório destinado aos projetos práticos da disciplina de **Estruturas de Dados II** do curso de Engenharia de Software (5º Semestre) da Unicesumar - Ponta Grossa/PR.
 
-O foco deste projeto é a implementação em **Java** de estruturas de dados complexas e a análise estatística de desempenho (tempo de execução e complexidade) em diferentes volumes de dados, simulando cenários reais de backend.
+## 👥 Integrantes do Grupo
+* **Luiz Francisco P. P. Neto**
+* **Camilli Vitória de Lara**
+* **Gabriel F. Palomares**
 
-📄 **Nota:** O relatório completo com a análise estatística, gráficos de desempenho e conclusões teóricas (Big-O) está disponível no arquivo `Relatorio_EstruturaDeDados.pdf` anexado a este repositório.
+## 🚀 Módulos do Projeto
 
-## 🚀 Estrutura dos Projetos
+O trabalho engloba a implementação de algoritmos clássicos com foco em performance e organização de código:
 
-O trabalho está dividido em três grandes módulos:
+### 1. War Room: Simulação de Vertex Cover (Grafos)
+Este módulo resolve o desafio de infraestrutura crítica proposto em aula. O objetivo é encontrar o **Menor Conjunto de Vértices** (Vertex Cover) que cubra todas as arestas de um grafo, simulando o monitoramento de servidores em um ataque cibernético.
 
-### 1. Projeto 1: Árvores e Balanceamento
-Implementação das operações fundamentais (Inserção, Remoção, Busca e Cálculo de Altura) em três tipos de árvores binárias para avaliar o custo do balanceamento:
-* **Árvore Binária de Busca (BST):** Estrutura base sem auto-balanceamento.
-* **Árvore AVL:** Balanceamento rigoroso baseado em fator de equilíbrio (altura).
-* **Árvore Rubro-Negra (Red-Black Tree):** Balanceamento otimizado focado em propriedades de coloração de nós.
-* **Heurística do Caixeiro-Viajante:** Algoritmo do Vizinho Mais Próximo implementado para solucionar o problema em grafos (matriz de adjacência) com análise de tempo.
+*   **Abordagem Técnica:** O problema de Vertex Cover é **NP-Completo**. Implementamos uma solução utilizando **Backtracking com Poda (Pruning)**. O algoritmo explora as combinações de vértices e descarta caminhos que já ultrapassaram o tamanho da melhor solução encontrada até o momento.
+*   **Complexidade:** $O(2^V \cdot E)$ no pior caso.
+*   **Arquitetura:** O projeto foi desenvolvido seguindo os princípios de **Programação Orientada a Objetos (POO)** e organizado no pacote `war`, separando as responsabilidades entre classes de modelo (`Grafo`, `Aresta`) e classes de lógica (`Otimizador`, `Encontrar`).
 
-### 2. Projeto 2: Sistemas de Busca
-Benchmark comparativo entre algoritmos de pesquisa utilizando diferentes volumes de dados (10k, 100k e 1M de registros):
-* Busca Sequencial ($O(n)$)
-* Busca Binária ($O(\log n)$)
-* Busca em Árvore de Busca AVL ($O(\log n)$)
+### 2. Árvores e Balanceamento
+Análise do custo de balanceamento e operações em estruturas não lineares:
+*   **BST, AVL e Rubro-Negra:** Comparativo de altura e tempo de inserção/busca.
+*   **Caixeiro-Viajante:** Algoritmo do Vizinho Mais Próximo para otimização de rotas em grafos.
 
-### 3. Projeto 3: Benchmark de Ordenação
-Análise empírica e teórica dos algoritmos de ordenação mais utilizados no mercado, avaliando o Melhor Caso, Caso Médio e Pior Caso em arrays de até 20.000 posições:
-* Merge Sort ($O(n \log n)$)
-* Quick Sort ($O(n \log n)$ a $O(n^2)$)
+### 3. Sistemas de Busca e Ordenação
+Benchmark comparativo entre diferentes algoritmos:
+*   **Busca:** Sequencial, Binária e AVL.
+*   **Ordenação:** Merge Sort e Quick Sort, testados com volumes de até 1 milhão de registros para análise de Big-O.
 
-## 🛠️ Tecnologias Utilizadas
-* **Linguagem:** Java
-* **Conceitos:** Orientação a Objetos, Recursão, Análise de Complexidade de Algoritmos (Big-O), Estatística Básica (Média e Desvio Padrão).
+## 🛠️ Por que escolhemos essa implementação?
+
+Para o módulo **War Room**, optamos por uma estrutura **Orientada a Objetos com Pacotes** por três motivos principais:
+1.  **Escalabilidade:** A separação em classes (`Grafo`, `Aresta`, `Encontrar`) permite que o código seja reutilizado em outros projetos de backend sem necessidade de reescrita.
+2.  **Manutenibilidade:** Facilitar a leitura e correção de bugs específicos em partes isoladas do algoritmo.
+3.  **Encapsulamento:** Garantir que os dados do grafo não sejam alterados de forma insegura durante o processamento da cobertura mínima.
 
 ## ⚙️ Como Executar
-1. Clone este repositório:
-   ```bash
-   git clone [https://github.com/Luizfp0908/TrabalhoEstruturaDeDadosFaculdade.git](https://github.com/Luizfp0908/TrabalhoEstruturaDeDadosFaculdade.git)
+
+1.  Clone este repositório:
+    ```bash
+    git clone [https://github.com/Luizfp0908/TrabalhoEstruturaDeDadosFaculdade.git](https://github.com/Luizfp0908/TrabalhoEstruturaDeDadosFaculdade.git)
